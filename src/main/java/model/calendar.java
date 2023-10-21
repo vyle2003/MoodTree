@@ -8,6 +8,7 @@ public class calendar {
     LocalDate date = LocalDate.now();
     private String mood;
 
+
     // Get mood
     public String getMood() {
         return(mood);
@@ -42,5 +43,5 @@ public class calendar {
 
     
         
-
+    
 }
