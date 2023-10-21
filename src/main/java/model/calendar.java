@@ -39,6 +39,8 @@ public class calendar {
         this.mood = mood;
     }
 
+    //set
+
         
 
     

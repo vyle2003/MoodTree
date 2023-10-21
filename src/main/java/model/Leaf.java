@@ -20,7 +20,7 @@ public class Leaf {
         this.mood = mood;
         this.description = description;
     }
-
+    
     //GETTER
     public String getMood() {
         return this.mood;
