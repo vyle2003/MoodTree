@@ -1,19 +1,17 @@
-package main.java.model;
+package model;
+
+import model.Mood;
 
 import java.util.Scanner;
 
 public class Leaf {
-    private String mood;
+    private Mood mood;
     private String description;
- //   private String darkGreen = "#217a34";
-//    private String green = "#8aa62d";
-//    private String yellow = "#ccc90e";
-//    private String brownish = "#c77904";
-//    private String brown = "#6b4713";
+
 
     //Initialize
     public Leaf() {
-        mood = "Insert Mood ";
+
         description = "No description provided";
     }
 
