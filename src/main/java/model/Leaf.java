@@ -9,25 +9,19 @@ public class Leaf {
     private String description;
 
 
-    //Initialize
-    public Leaf() {
-
-        description = "No description provided";
-    }
-
     //Constructor
-    public Leaf(String mood, String description) {
+    public Leaf(Mood mood, String description) {
         this.mood = mood;
         this.description = description;
     }
     
     //GETTER
-    public String getMood() {
+    public Mood getMood() {
         return this.mood;
     }
 
     //SETTER
-    public void setMood(String mood) {
+    public void setMood(Mood mood) {
         this.mood = mood;
     }
 
