@@ -1,13 +1,16 @@
 package model;
 import java.util.Date;
+import java.util.Calendar;
 
 
 public class calendar {
 
     public static void main(String[] args) {
     
-        Date d = new Date(0, 0, 0);
-        System.out.println( d.getTime() );
+        Calendar c = Calendar.getInstance();
+        System.out.println(c.getTime() );
+
+        
 
         
 
