@@ -2,20 +2,19 @@ package ui;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
-public class AccountManagement extends Application{
+public class AccountManagement{
 
-    @PostMapping("/submit")
-    public String signUp(@RequestParam("username") String username, @RequestParam("email") String email, @RequestParam("password") String password) {
-        //store inside database
-        return null;
-    }
-
-    @PostMapping("/submit")
-    public String login(@RequestParam("email") String email, @RequestParam("password") String password) {
-        //check
-        return null;
+    @RequestMapping("/index")
+    public String processForm(@RequestParam("page") String page, @RequestParam("email") String email, @RequestParam("password") String password) {
+        if ("login".equals(page)) {
+            System.out.println();
+        } else if ("signup".equals(page)) {
+            System.out.println();
+        }
+        return page;
     }
 }
