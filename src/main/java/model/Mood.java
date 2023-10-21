@@ -1,6 +1,8 @@
 package model;
 
-public class Mood {
+import ui.Application;
+
+public class Mood extends Application {
     public static final Mood ECSTATIC = new Mood("Ecstatic", "#217a34");
     public static final Mood HAPPY = new Mood("Happy", "#8aa62d");
     public static final Mood BORED = new Mood("Bored", "#c77904");
