@@ -2,7 +2,7 @@ package model;
 import java.util.Date;
 
 
-public class calender {
+public class calendar {
 
     public static void main(String[] args) {
     
