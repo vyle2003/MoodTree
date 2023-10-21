@@ -19,6 +19,7 @@ form {
 
 .form-group {
     margin-bottom: 10px;
+    margin-right: 25px;
     text-align: left;
 }
 
@@ -52,4 +53,4 @@ a {
     color: #4CAF50;
 }
 
-/* ffff*/
+
