@@ -1,0 +1,14 @@
+h1{
+    background-color: rgb(242, 238, 105);
+    opacity: 0.5;
+    color: rgb(13, 185, 53);
+    margin: 0 auto;
+    font-size: 3.5em;
+    padding: 40px;
+    text-align: center;
+}
+
+.mood_col{
+    color: rgb(116, 85, 1);
+}
+
