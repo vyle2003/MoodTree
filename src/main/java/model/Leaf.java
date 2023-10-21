@@ -14,7 +14,7 @@ public class Leaf {
         this.mood = mood;
         this.description = description;
     }
-
+    
     //GETTER
     public Mood getMood() {
         return this.mood;
