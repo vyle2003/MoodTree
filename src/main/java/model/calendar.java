@@ -7,7 +7,7 @@ import java.util.List;
 
 
 public class calendar {
-    private String title;
+    private String description;
     LocalDate date = LocalDate.now();
     private String mood;
 
@@ -19,7 +19,7 @@ public class calendar {
 
     // Get title
     public String getTitle() {
-        return(title);
+        return(description);
     }
 
     //Get date
@@ -42,7 +42,10 @@ public class calendar {
         this.mood = mood;
     }
 
-    //set
+    //set description
+    public void setDescription(String description) {
+        this.description = description;
+    }
 
         
 
