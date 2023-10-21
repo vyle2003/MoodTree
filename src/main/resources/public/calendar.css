@@ -44,7 +44,7 @@
     display: flex;
   
     border-radius: 10px;
-    background-color: #373c4f;
+    background-color: #439b4b;
   }
   .left {
     width: 60%;
@@ -273,7 +273,7 @@
   .right .today-date .event-date {
     font-size: 1rem;
     font-weight: 400;
-    color: #878895;
+    color: #f8f8f8;
   }
   .events {
     width: 100%;
