@@ -1,24 +1,32 @@
 package ui;
 
+import model.Mood;
+import model.Leaf;
+
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.ui.Model;
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import java.util.Date;
+import java.sql.Timestamp;
+
 
 @Controller
 public class moodManagement {
-    @GetMapping("/main")
-    public String showForm() {
-        return "form";
-    }
+    public static void saveMoodEntry(Leaf leaf) throws SQLException {
+        String insertQuery = "INSERT INTO user_moods (mood, description, entry_date) VALUES (?, ?, ?)";
+        try (Connection connection = Application.connectDB();
+            PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
 
-    @PostMapping("/submit")
-    public String submitForm(@RequestParam String name, @RequestParam String email, Model model) {
-        // Process the data (e.g., save to a database, perform some logic)
-        // Here, we just display the data in the response
-        model.addAttribute("name", name);
-        model.addAttribute("email", email);
-        return "result";
+            preparedStatement.setString(1, leaf.getMood().getMoodName());
+            preparedStatement.setString(2, leaf.getDescription());
+            preparedStatement.setTimestamp(3, new Timestamp(new Date().getTime()));
+
+            preparedStatement.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
     }
 }

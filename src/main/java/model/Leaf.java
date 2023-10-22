@@ -2,8 +2,6 @@ package model;
 
 import model.Mood;
 
-import java.util.Scanner;
-
 public class Leaf {
     private Mood mood;
     private String description;
@@ -34,11 +32,5 @@ public class Leaf {
         this.description = description;
     }
 
-    public void inputFromUser() {
-        Scanner scanner = new Scanner(System.in);
-
 
     }
-
-
-}

@@ -13,7 +13,7 @@ public class Application {
         connectDB();
     }
 
-    public static void connectDB() {
+    public static Connection connectDB() {
         System.out.println("Connecting");
         Connection conn = null;
         try {
@@ -32,5 +32,6 @@ public class Application {
                 throw new RuntimeException(e);
             }
         }
+        return conn;
     }
 }
