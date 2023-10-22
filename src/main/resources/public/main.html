@@ -6,4 +6,80 @@
     <title>MoodTree</title>
     <link rel="stylesheet" href="main.css">
 </head>
+    <body>
+        <header>
+            <h1><span class="mood_col">Mood</span>Tree</h1>
+            <div class="dropdown">
+                <button class="dropbtn">MENU</button>
+                <div class="dropdown-content">
+                  <a href="calendar.html">Calendar</a>
+                  <a href="index.html">Log out</a>
+                </div>
+            </div>
+            <div>
+                <p id="currentDate"></p>
+            
+                <script>
+                    document.addEventListener('DOMContentLoaded', function() {
+                        var currentDateElement = document.getElementById('currentDate');
+            
+                        var currentDate = new Date();
+                        var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                        var formattedDate = currentDate.toLocaleDateString('en-US', options);
+            
+                        currentDateElement.textContent = formattedDate;
+                    });
+                </script>
+            </div>
 
+            <div class="titleForMood">
+                <h3>What is your MOOD for Today?</h3>
+            </div>
+
+            <form action="" method="POST">
+                <div id="parentLeaf">
+                    <div id="happy" class="leaf">
+                        <h5 class="leafTest">Happy</h5>
+                        <img src ="assets/leaf1.png"/>
+                        <input type="radio" id="leafTest" name="feeling" value="happy">   
+                    </div>
+                    <div id="okay" class="leaf">
+                        <h5 class="leafTest">Okay</h5>
+                        <img src = "assets/leaf2.png" />
+                        <input type="radio" id="leafTest" name="feeling" value="okay">
+                    </div>
+                    <div id="neutral" class="leaf">
+                        <h5 class="leafTest">Neutral</h5>
+                        <img src = "assets/leaf3.png" />
+                        <input type="radio" id="leafTest" name="feeling" value="neutral">
+                    </div>
+                    <div id="sad" class="leaf">
+                        <h5 class="leafTest">Sad</h5>
+                        <img src = "assets/leaf4.png" />
+                        <input type="radio" id="leafTest" name="feeling" value="sad">
+                    </div>
+                    <div id="angry" class="leaf">
+                        <h5 class="leafTest">Angry</h5>
+                        <img src = "assets/leaf5.png" />
+                        <input type="radio" id="leafTest" name="feeling" value="angry">
+                    </div>
+                </div>
+
+                <div id="textbox">
+                    <h2 id="todaynotes">Today's Note</h2>
+                    <textarea id="textnotes" name="textnotes" placeholder="Tell me your feelings!"></textarea>
+                   
+                </div>
+                <input id="sub_button" type="submit" value="Submit"/>
+            </form>
+            
+          
+
+
+        </header>
+        <main>
+
+
+        </main>
+    </body>
+</html>
