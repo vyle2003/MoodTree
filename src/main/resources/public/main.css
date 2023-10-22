@@ -1,15 +1,161 @@
+body{
+    background-color: rgb(192, 249, 208);
+    background-image: url('assets/main_background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative; 
+}
+
 h1{
-    background-color: rgb(242, 238, 105);
-    opacity: 0.5;
-    color: rgb(13, 185, 53);
+    
+    color: rgb(92, 64, 51);
     margin: 0 auto;
-    font-size: 3.5em;
+    font-size: 5em;
     padding: 40px;
     text-align: center;
+    font-family: copperplate;
 }
 
 .mood_col{
-    color: rgb(116, 85, 1);
+    color: rgb(92, 64, 51);
 }
 
-/*dddddd*/
+
+.dropdown {
+    position: absolute;
+    top: 10px; /* Adjust the top position as needed */
+    right: 10px; /* Adjust the right position as needed */
+}
+
+/* Update the .dropbtn class */
+.dropbtn {
+    background-color: #f0f643;
+    color: black;
+    padding: 10px 30px; /* Reduce padding to make it smaller */
+    font-size: 14px; /* Reduce font size to make it smaller */
+    border: none;
+    cursor: pointer;
+    margin-right: 150px;
+    border-radius: 50px;
+    font-family: copperplate;
+}
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #eba44c;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-family: copperplate;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f0c256;}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: #de6e19;
+  }
+
+p {
+    font-size: 25px;
+    text-align: center;
+}
+
+.column{
+    flex: 1;
+}
+
+#parentLeaf {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.leaf {
+    width: 20%; 
+    box-sizing: border-box;
+    text-align: center;
+    margin: 5px;
+    text-align: center;
+}
+
+h3 {
+    font-size: 50px;
+    text-align: center;
+    font-family: copperplate;
+    color: green;
+}
+
+h5 {
+    font-size: 25px;
+    font-family: cooperplate;
+    color: rgb(92, 64, 51);
+    
+
+}
+
+.leafText {
+    width: 20%; 
+    box-sizing: border-box;
+    text-align: center;
+    margin: 5px;
+    text-align: center;
+}
+
+input[type="radio"]{
+    transform: scale(3);
+}
+
+#textbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto 5px;
+}
+
+#todaynotes {
+    font-size: 35px;
+    font-family: cooperplate;
+    color: rgb(92, 64, 51);
+    margin-bottom: 10px;
+    margin-right: 20px;
+    padding-bottom: 250px;
+
+}
+
+textarea {
+    width: 800px;
+    height: 300px;
+
+}
+
+#sub_button{
+    background-color: rgb(255, 148, 27);
+    color: black;
+    padding: 20px 50px; /* Reduce padding to make it smaller */
+    font-size: 20px; /* Reduce font size to make it smaller */
+    border: none;
+    cursor: pointer;
+    margin-right: 150px;
+    border-radius: 50px;
+    font-family: copperplate;
+    margin-left: 800px;
+
+}
