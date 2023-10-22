@@ -4,8 +4,6 @@ import model.Mood;
 import model.Leaf;
 
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.RequestMapping;
-
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
@@ -14,13 +12,11 @@ import java.sql.Timestamp;
 
 
 @Controller
-public class moodManagement {
-
-    @RequestMapping("/getmoodentry")
+public class moodManagement extends Application {
     public static void saveMoodEntry(Leaf leaf) throws SQLException {
         String insertQuery = "INSERT INTO user_moods (mood, description, entry_date) VALUES (?, ?, ?)";
         try (Connection connection = new DatabaseConnection().connectDB();
-            PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
+             PreparedStatement preparedStatement = connection.prepareStatement(insertQuery)) {
 
             preparedStatement.setString(1, leaf.getMood().getMoodName());
             preparedStatement.setString(2, leaf.getDescription());

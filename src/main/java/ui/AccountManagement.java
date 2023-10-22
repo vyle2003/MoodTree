@@ -13,7 +13,32 @@ public class AccountManagement extends Application{
 
     @RequestMapping("/login")
     public String loginForm(@RequestParam("email") String email, @RequestParam("password") String password) {
-        return null;
+        String insertSQL = "SELECT COUNT(*) FROM loginInfo WHERE email = ? AND password = ?";
+        try {
+            Connection dc = new DatabaseConnection().connectDB();
+            dc.setAutoCommit(false);
+            PreparedStatement preparedStatement = dc.prepareStatement(insertSQL);
+            preparedStatement.setString(1, email);
+            preparedStatement.setString(2, password);
+            try (ResultSet resultSet = preparedStatement.executeQuery()) {
+                if (resultSet.next()) {
+                    int count = resultSet.getInt(1);
+                    if (count > 0) {
+                        return "redirect:/calendar.html";
+                    } else {
+                        return "redirect:/error.html";
+                    }
+                }
+            }
+        } catch (SQLException e) {
+            throw new RuntimeException(e);
+        }
+        return "redirect:/error.html";
+    }
+
+    @RequestMapping("/goCalendar")
+    public String goToCalendar() {
+        return "redirect:/calendar.html";
     }
 
     @RequestMapping("/signup")
