@@ -16,10 +16,18 @@ The Calendar page is the page where Users will be able to add Events or Tasks.
 All of the Frontend Files are stored under src/main/resources/public.
 
 	BACKEND: 
-The project was done on Intellij JDK 17
+
+The project was done on Intellij JDK 17 	
 We created a database for login and signin to store user’s authentication
 The database also stores the user’s mood and their description of how they are feeling with the timestamp when they hit submit 
 Spent most of our time to debug and work with database
+
+How to run the application:
+1. Make sure it is on JDK 17 version
+2. Run the application
+3. run localhost:8080
+4. Sign-up or log_in
+5. Enjoy!! 
 
 Order of Operations: 
 Create your account by pressing the “Sign up” button.
