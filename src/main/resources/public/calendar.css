@@ -541,4 +541,18 @@
       padding: 20px;
     }
   }
+
   
+  footer {
+    background-color: #333;
+    padding: 10px;
+    color: #fff;
+    display: block;
+    justify-content: space-between;
+}
+
+footer a {
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 10px;
+}
