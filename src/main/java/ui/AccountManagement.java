@@ -11,7 +11,7 @@ import java.sql.*;
 @EnableAutoConfiguration
 public class AccountManagement extends Application{
 
-    @RequestMapping("/index")
+    @RequestMapping("/login")
     public String loginForm(@RequestParam("email") String email, @RequestParam("password") String password) {
         return null;
     }
@@ -45,6 +45,6 @@ public class AccountManagement extends Application{
             e.printStackTrace();
         }
 
-        return "redirect:/calendar.html";
+        return "redirect:/main.html";
     }
 }
