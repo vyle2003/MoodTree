@@ -8,7 +8,7 @@ public class DatabaseConnection {
     public Connection connectDB() {
         Connection conn = null;
         try {
-            String url = "jdbc:sqlite:./UserData.db";
+            String url = "jdbc:sqlite:src/main/java/UserData.db";
             conn = DriverManager.getConnection(url);
         } catch (SQLException e) {
             throw new RuntimeException(e);

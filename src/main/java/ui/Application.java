@@ -14,10 +14,13 @@ public class Application {
     }
 
     public static void connectDB() {
+        System.out.println("Connecting");
         Connection conn = null;
         try {
-            String url = "jdbc:sqlite:./UserData.db";
+            String url = "jdbc:sqlite:src/main/java/UserData.db";
             conn = DriverManager.getConnection(url);
+            conn.setAutoCommit(false);
+            System.out.println("Connected");
         } catch (SQLException e) {
             throw new RuntimeException(e);
         } finally {
